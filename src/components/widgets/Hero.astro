@@ -6,21 +6,25 @@ import type { CallToAction } from '~/types';
 export interface Props {
   id?: string;
   title?: string;
+  title2?: string;
   subtitle?: string;
   tagline?: string;
   content?: string;
   actions?: string | CallToAction[];
   image?: string | any; // TODO: find HTMLElementProps
+  isDark?: boolean;
 }
 
 const {
   id,
   title = await Astro.slots.render('title'),
+  title2 = await Astro.slots.render('title2'),
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
   content = await Astro.slots.render('content'),
   actions = await Astro.slots.render('actions'),
   image = await Astro.slots.render('image'),
+  isDark = false,
 } = Astro.props;
 ---
 
@@ -41,7 +45,7 @@ const {
         {
           title && (
             <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
+              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-white"
               set:html={title}
             />
           )

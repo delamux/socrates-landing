@@ -4,6 +4,9 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'lux-gradient': 'linear-gradient(to right, #FF0000, #FFFFFF, #00A1DE)',
+      },
       colors: {
         primary: 'var(--aw-color-primary)',
         secondary: 'var(--aw-color-secondary)',

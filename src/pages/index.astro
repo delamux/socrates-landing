@@ -2,7 +2,6 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -18,12 +17,11 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Hero image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}>
+  <Hero image={{ src: '~/assets/images/schedule-socrates.jpg', alt: 'AstroWind Hero Image' }}>
     <Fragment slot="title">
-      The SoCraTes <span
-        class="bg-gradient-to-br from-[#FF0000] via-[#FFFFFF] to-[#00A1DE] bg-clip-text text-transparent"
-        >Luxembourg</span
-      >
+      <span class="bg-clip-text text-transparent bg-lux-gradient">
+        SoCraTes Luxembourg
+      </span>
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -35,13 +33,10 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-
-  <!-- <Note /> -->
-
   <!-- Features Widget *************** -->
+<!--
 
-  <Features
+  <Features 
     id="features"
     tagline="Features"
     title="What you get with AstroWind"
@@ -85,6 +80,7 @@ const metadata = {
       },
     ]}
   />
+-->
 
   <!-- Steps Widget ****************** -->
 
@@ -94,29 +90,29 @@ const metadata = {
       {
         title: 'Opening',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+          "It will be a small welcome to the event with a small breakfast, where we will explain how the event will work and we will introduce the facilitators.",
         icon: 'tabler:clock',
       },
       {
         title: 'Conduct code',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+          "Inclusive and respectful behavior is a core value of SoCraTes. We want to create a safe and welcoming environment for everyone. We expect all participants to read and adhere to the SoCraTes Code of Conduct.",
         icon: 'tabler:heart-handshake',
       },
       {
         title: 'Schedule of events',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+          'The schedule of events is democratically decided by the participants. The schedule is created after the presentation of the topics and the voting.',
         icon: 'tabler:calendar-smile',
       },
       {
         title: 'On going',
-        description: 'The event is happening! Enjoy it and share your experience with the community.',
+        description: 'We will be working on the topics that have been voted on.',
         icon: 'tabler:brand-vscode',
       },
       {
         title: 'Good bye!',
-        description: 'The event is over! See you next year!',
+        description: 'The event will end with a small closing ceremony, where we will share our experiences and say goodbye.',
         icon: 'tabler:hand-rock',
       },
     ]}
@@ -129,59 +125,40 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="What is About?"
+    subtitle="Everyone who is concerned with coding, testing, code quality, software craft, or whoever who takes care about software products, if you are:"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        title: 'Developer',
+        description: "You are passionate about software development and testing",
+        icon: 'flat-color-icons:command-line',
+      },
+      {
+        title: 'Student',
+        description:
+          "You studing software development and you want to learn more about software craft and testing",
+        icon: 'flat-color-icons:graduation-cap',
+      },
+      {
+        title: 'Product Manager',
+        description:
+          'If you take care of valuable software and you want to share your experience with anyone.',
+        icon: 'flat-color-icons:multiple-devices',
+      },
+      {
+        title: 'UX Designer',
+        description: "You are UX and you share about software craft and testing",
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+        title: 'Graphic Designer',
+        description: 'You do designs for digital products.',
+        icon: 'flat-color-icons:panorama',
       },
       {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+        title: 'QA Engineer',
+        description: 'For those who found the weaknesses of the software and want to share their experience.',
+        icon: 'flat-color-icons:todo-list',
       },
     ]}
   >
